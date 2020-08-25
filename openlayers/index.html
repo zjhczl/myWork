@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <center><h1>123</h1></center>
+    <link rel="stylesheet" href="./src/openlayers/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="./src/openlayers/ol.js"></script>
+    <title>OpenLayers example</title>
+  </head>
+  <body onload="zj()">
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <div id="zj"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
+    <script type="text/javascript">
+      function zj()
+      {
+        window.alert("zj123")
+      }
+      ht = document.getElementById("zj");
+      ht.innerHTML = "45643a56"
+    </script>
+    
+  </body>
+</html>
